@@ -32,8 +32,8 @@ $("button").click(function() { // Reset button
 
 // <!-- Function to check the winning move -->
 function check(symbol) { // Check the winning move
-	if ($(".sq1").hasClass(symbol) &&
-		$(".sq2").hasClass(symbol) &&
+	if ($(".sq1").hasClass(symbol) && // Check if the first square has the same sign as the parameter
+		$(".sq2").hasClass(symbol) && // Check if the second square has the same sign as the parameter
 		$(".sq3").hasClass(symbol))
 	{
 		$(".sq1").css("color", "green");
