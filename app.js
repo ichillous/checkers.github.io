@@ -1,6 +1,5 @@
 // Flag variable for checking Turn
-// We'll be modifying our base logic in the
-// next steps as per requirements    
+
 var turn = 1;
 
 $("button").click(function() {
@@ -104,8 +103,7 @@ function check(symbol) {
 
 
 // <!-- Resetting the game -->
-function reset()
-{
+function reset(){
 $("#screen").text("PLAYER 1 TURN FOLLOWS");
 $("#screen").css("background-color", "transparent");
 $(".r").removeClass("fa fa-check");
