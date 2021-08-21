@@ -1,13 +1,13 @@
 // Flag variable for checking Turn
 
-var turn = 1;
+var turn = 1;  
 
 $("button").click(function() {
-    if(turn == 1) {
-        $("#screen").text("PLAYER 2 TURN FOLLOWS");
+    if(turn == 1) { 
+        $("#screen").text("PLAYER 2 TURN FOLLOWS"); // Change the text on the screen
 
     // Check sign font from font-awesome
-    $(this).addClass("fa fa-check"); 
+    $(this).addClass("fa fa-check");  // Add check sign to the button
         turn = 2;            
     }
     else {    
@@ -19,19 +19,19 @@ $("button").click(function() {
     }
 });
 
-$("button").click(function() {
-    if($(this).hasClass("fa fa-times") ||
-            $(this).hasClass("fa fa-check"))
+$("button").click(function() { // Reset button
+    if($(this).hasClass("fa fa-times") || // Check if the button has the cross sign
+            $(this).hasClass("fa fa-check")) // Check if the button has the check sign
     {       
         $(this).css("background-color", "red");
         setTimeout(() => {
-            $(this).css("background-color", "white");
+            $(this).css("background-color", "white"); // Reset the button color
         }, 800);        
     }
 });
 
 // <!-- Function to check the winning move -->
-function check(symbol) {
+function check(symbol) { // Check the winning move
 	if ($(".sq1").hasClass(symbol) &&
 		$(".sq2").hasClass(symbol) &&
 		$(".sq3").hasClass(symbol))
@@ -104,8 +104,8 @@ function check(symbol) {
 
 // <!-- Resetting the game -->
 function reset(){
-$("#screen").text("PLAYER 1 TURN FOLLOWS");
-$("#screen").css("background-color", "transparent");
+$("#screen").text("PLAYER 1 TURN FOLLOWS"); // Change the text on the screen            
+$("#screen").css("background-color", "transparent"); // Reset the background color
 $(".r").removeClass("fa fa-check");
 $(".r").removeClass("fa fa-times");
 turn=1;
